@@ -11,7 +11,7 @@ text<-reut[,140]
 install.packages("tm")
 library(tm)
 reuters<- Corpus(VectorSource(text)) #creat a corpus
-#install.packages("SnowballC")
+install.packages("SnowballC")
 library(SnowballC)
 
 pre-processing cleaning
@@ -90,10 +90,11 @@ data.feature2<-cbind(feature2,final.topics)
 data.feature3<-cbind(feature3,final.topics)
 
 
-classification
+Classification
 ----------------
-accrucy
+
 NB
+---
 install.packages('e1071')
 library(e1071)
 accuracy.nb<-function(data,k){
@@ -120,6 +121,7 @@ naivebayes2<-accuracy.nb(data.feature2,10);naivebayes2
 naivebayes3<-accuracy.nb(data.feature3,10);naivebayes3
 
 SVM
+---
 accuracy.svm<-function(data,k){
   set.seed(7755)
   data$id<-sample(1:k,nrow(data),replace=TRUE)
@@ -257,7 +259,7 @@ micro.avg.svm<-SVM1[11];micro.avg.svm #micro precision=recall=f measure= accurac
 
 
 
-clustering
+Clustering
 ---------------
 
 Hierarchical Clustering 
