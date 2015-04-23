@@ -1,6 +1,11 @@
 # reusters21578-data-mining
-name the original data set of reuters as reut
-and then just run the following code
+INTRODUCTION
+--------------
+This project is based on the original data set reuters21578. The data set consists totally 21578 documents, split into 21 SGML files. Some documents are assigned for training purpose, some are for testing and the others are not used. Totally 135 columns topic names are included and the final column is the document text, from which we can extract features. For each document, if the value for a particular topic name is ‘1’, then the document is assigned to this particular topic. This report adapted a strategy to assign each document with only one topic. In this report, Reuters21578 data set was firstly conducted pre-processing to obtain the features representation of documents, and then new dataset with features and topics was used for classification with two different classifiers. Finally, three clustering algorithms were applied based on the best performing feature.
+
+EXAMPLE TO RUN THE CODE
+------------
+First of all, rename the original data as reut, and then just follow the codes:
 
 text<-reut[,140]
 #install.packages("tm")
